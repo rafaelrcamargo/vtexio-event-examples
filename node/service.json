@@ -1,0 +1,14 @@
+{
+  "memory": 256,
+  "ttl": 120,
+  "timeout": 30,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "onAppInstalled": {
+      "sender": "apps",
+      "keys": ["setup"]
+    }
+  }
+}

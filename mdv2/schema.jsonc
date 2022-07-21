@@ -1,0 +1,53 @@
+/* URL: /api/dataentities/boilerplate/schemas/masterdata */
+
+{
+  "properties": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "required": ["item"],
+  "v-indexed": ["item"],
+  "v-default-fields": ["item"],
+  "v-security": {
+    "allowGetAll": true,
+    "publicRead": ["item"],
+    "publicWrite": ["item"],
+    "publicFilter": ["item"]
+  },
+  "v-cache": false
+}
+
+/*
+  Request template:
+
+  var myHeaders = new Headers()
+  myHeaders.append('Content-Type', 'application/json')
+  var raw = JSON.stringify({
+    "properties": {
+      "item": {
+        "type": "string"
+      }
+    },
+    "required": ["item"],
+    "v-indexed": ["item"],
+    "v-default-fields": ["item"],
+    "v-security": {
+      "allowGetAll": true,
+      "publicRead": ["item"],
+      "publicWrite": ["item"],
+      "publicFilter": ["item"]
+    },
+    "v-cache": false
+  })
+  var requestOptions = {
+    method: 'PUT',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow',
+  }
+  fetch('/api/dataentities/boilerplate/schemas/masterdata', requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error))
+*/

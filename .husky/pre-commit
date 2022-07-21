@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "> Running pre-commit hook..."
+echo
+echo ">> Running lint..."
+yarn lint
+echo
+echo ">>> Linting complete!"
+echo
+echo ">> Running tests..."
+yarn test
+echo
+echo ">>> Tests complete!"
+echo
+echo ">> Running format..."
+yarn format
+echo
+echo ">>> Formatting complete!"
+echo
+echo ">> Proceedint to commit..."
