@@ -1,9 +1,9 @@
 {
-  "name": "ourstores",
+  "name": "event-examples",
   "vendor": "avantivtexio",
   "version": "0.0.0",
-  "title": "ourstores",
-  "description": "ourstores",
+  "title": "event-examples",
+  "description": "event-examples",
   "dependencies": {},
   "builders": {
     "node": "6.x"

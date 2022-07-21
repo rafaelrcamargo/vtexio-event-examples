@@ -8,7 +8,8 @@
   "events": {
     "onAppInstalled": {
       "sender": "apps",
-      "keys": ["setup"]
+      "keys": ["setup"],
+      "settingsType": "workspace"
     }
   }
 }
