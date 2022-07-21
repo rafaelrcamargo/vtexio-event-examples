@@ -8,8 +8,11 @@
   "events": {
     "onAppInstalled": {
       "sender": "apps",
-      "keys": ["setup"],
-      "settingsType": "workspace"
+      "keys": ["setup"]
+    },
+    "onAppLinked": {
+      "sender": "apps",
+      "keys": ["linked"]
     }
   }
 }

@@ -3,13 +3,7 @@ export default async (
   next: () => Promise<any>
 ) => {
   console.log('onAppInstalled', ctx.body.id)
-
-  ctx.vtex.logger.info({
-      setup: {
-        status: 'success',
-        message: 'Setup successfully completed',
-      },
-  })
+  console.log('onAppInstalled', ctx.clients.example.test())
 
   await next()
 }

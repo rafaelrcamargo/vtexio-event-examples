@@ -55,5 +55,5 @@ declare global {
 export default new Service<Clients, State, ParamsContext>({
   // ? We pass our clients bag to the service.
   clients,
-  events: { onAppInstalled: onAppInstalled },
+  events: { onAppInstalled: onAppInstalled, onAppLinked: onAppInstalled },
 })
