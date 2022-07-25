@@ -22,12 +22,12 @@
       "keys": ["linked"]
     },
     "onAppInstalledBuilder": {
-      "sender": "vtex.builder-hub",
+      "sender": "builder",
       "keys": ["setup"],
       "settingsType": "workspace"
     },
     "onAppLinkedBuilder": {
-      "sender": "vtex.builder-hub",
+      "sender": "builder",
       "keys": ["linked"]
     },
     "onSettingsChanged": {
