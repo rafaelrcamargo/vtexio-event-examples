@@ -39,6 +39,13 @@
         "host": "api.vtex.com",
         "path": "/dataentities/*"
       }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "4006c06b-d8de-4361-8e53-6f7f2b431d32.mock.pstmn.io",
+        "path": "/*"
+      }
     }
   ],
   "registries": [
