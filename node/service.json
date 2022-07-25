@@ -21,6 +21,15 @@
       "sender": "apps",
       "keys": ["linked"]
     },
+    "onAppInstalledBuilder": {
+      "sender": "vtex.builder-hub",
+      "keys": ["setup"],
+      "settingsType": "workspace"
+    },
+    "onAppLinkedBuilder": {
+      "sender": "vtex.builder-hub",
+      "keys": ["linked"]
+    },
     "onSettingsChanged": {
       "sender": "apps",
       "keys": ["settings"]

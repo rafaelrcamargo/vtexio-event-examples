@@ -64,6 +64,8 @@ export default new Service({
   events: {
     onSettingsChanged: event,
     onAppInstalled: event,
+    onAppInstalledBuilder: event,
+    onAppLinkedBuilder: event,
     onAppLinked: event,
   },
 })
