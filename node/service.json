@@ -14,15 +14,16 @@
   "events": {
     "onAppInstalled": {
       "sender": "apps",
-      "keys": [
-        "setup"
-      ]
+      "keys": ["setup"],
+      "settingsType": "workspace"
     },
     "onAppLinked": {
       "sender": "apps",
-      "keys": [
-        "linked"
-      ]
+      "keys": ["linked"]
+    },
+    "onSettingsChanged": {
+      "sender": "apps",
+      "keys": ["settings"]
     }
   }
 }

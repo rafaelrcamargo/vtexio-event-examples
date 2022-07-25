@@ -2,7 +2,6 @@
 import type {
   ClientsConfig,
   EventContext,
-  ParamsContext,
   RecorderState,
   ServiceContext,
 } from '@vtex/api'
@@ -14,7 +13,7 @@ import { Clients } from './clients'
 import { event } from './events/onAppInstalled'
 import { test } from './routes/test'
 
-const TIMEOUT_MS = 800
+const TIMEOUT_MS = 2500
 
 // Create a LRU memory cache for the Status client.
 // The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
@@ -53,7 +52,7 @@ declare global {
 }
 
 // * Export a service that defines route handlers and client options.
-export default new Service<Clients, State, ParamsContext>({
+export default new Service({
   // ? We pass our clients bag to the service.
   clients,
   routes: {
@@ -63,7 +62,8 @@ export default new Service<Clients, State, ParamsContext>({
     }),
   },
   events: {
+    onSettingsChanged: event,
     onAppInstalled: event,
-    onAppLinked: event
+    onAppLinked: event,
   },
 })

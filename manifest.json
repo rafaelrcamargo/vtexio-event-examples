@@ -1,7 +1,7 @@
 {
   "name": "event-examples",
   "vendor": "avantivtexio",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "title": "event-examples",
   "description": "event-examples",
   "dependencies": {},
@@ -13,7 +13,7 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "httpstat.us",
+        "host": "*",
         "path": "*"
       }
     },
@@ -32,24 +32,17 @@
     },
     {
       "name": "ADMIN_DS"
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "api.vtex.com",
-        "path": "/dataentities/*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "4006c06b-d8de-4361-8e53-6f7f2b431d32.mock.pstmn.io",
-        "path": "/link"
-      }
     }
   ],
-  "registries": [
-    "smartcheckout"
-  ],
+  "settingsSchema": {
+    "title": "Promotion Provider Middleware",
+    "type": "object",
+    "properties": {
+      "externalEndpoint": {
+        "title": "External Endpoint",
+        "type": "string"
+      }
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
