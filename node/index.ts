@@ -6,12 +6,13 @@ import type {
   RecorderState,
   ServiceContext,
 } from '@vtex/api'
-import { LRUCache, Service } from '@vtex/api'
+import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
 
 // * Events
-import onAppInstalled from './events/onAppInstalled'
+import { event } from './events/onAppInstalled'
+import { test } from './routes/test'
 
 const TIMEOUT_MS = 800
 
@@ -55,5 +56,14 @@ declare global {
 export default new Service<Clients, State, ParamsContext>({
   // ? We pass our clients bag to the service.
   clients,
-  events: { onAppInstalled: onAppInstalled, onAppLinked: onAppInstalled },
+  routes: {
+    // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
+    test: method({
+      GET: [test],
+    }),
+  },
+  events: {
+    onAppInstalled: event,
+    onAppLinked: event
+  },
 })

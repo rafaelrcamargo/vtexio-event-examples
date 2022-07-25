@@ -1,9 +1,8 @@
-export default async (
+export const event = async (
   ctx: InstalledAppEvent,
   next: () => Promise<any>
 ) => {
-  console.log('onAppInstalled', ctx.body.id)
-  console.log('onAppInstalled', ctx.clients.example.test())
+  console.log('onAppInstalled', ctx.clients.example.test("event"))
 
   await next()
 }
