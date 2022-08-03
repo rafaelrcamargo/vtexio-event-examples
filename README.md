@@ -14,10 +14,6 @@ Instruções de uso do app e pontos importantes.
 
 ## ...
 
-### **_Pronto, Seu app foi instalado com sucesso! :)_**
-
----
-
 ### TODOs:
 
 - [x] ...
