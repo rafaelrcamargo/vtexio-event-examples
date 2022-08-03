@@ -21,15 +21,6 @@
       "sender": "apps",
       "keys": ["linked"]
     },
-    "onAppInstalledBuilder": {
-      "sender": "builder",
-      "keys": ["setup"],
-      "settingsType": "workspace"
-    },
-    "onAppLinkedBuilder": {
-      "sender": "builder",
-      "keys": ["linked"]
-    },
     "onSettingsChanged": {
       "sender": "apps",
       "keys": ["settings"]

@@ -3,6 +3,5 @@ export const event = async (
   next: () => Promise<any>
 ) => {
   console.log('onAppInstalled', ctx.clients.example.test("event"))
-
   await next()
 }

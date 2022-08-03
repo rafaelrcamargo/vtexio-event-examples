@@ -4,6 +4,7 @@
   "version": "0.0.8",
   "title": "event-examples",
   "description": "event-examples",
+  "categories": [],
   "dependencies": {},
   "builders": {
     "node": "6.x"
@@ -14,13 +15,6 @@
       "name": "outbound-access",
       "attrs": {
         "host": "*",
-        "path": "*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "masterws.stg.hanzo.com.br",
         "path": "*"
       }
     },
