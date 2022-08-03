@@ -12,8 +12,6 @@ Anotações importantes antes de seguir para a instalação do App.
 
 Instruções de uso do app e pontos importantes.
 
-## ...
-
 ### TODOs:
 
 - [x] ...
