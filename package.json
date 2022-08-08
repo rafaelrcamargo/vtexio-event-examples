@@ -1,32 +1,34 @@
 {
   "name": "example",
-  "version": "0.0.0",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "start": "yarn && yarn lint && yarn format && yarn test && yarn vtex:link",
-    "vtex:link": "echo \">> Linking app!\" && vtex link",
-    "lint": "yarn lint:node && yarn lint:react",
-    "lint:node": "cd ./node && yarn lint",
-    "lint:react": "cd ./react && yarn lint",
-    "format": "prettier --write **/*.ts* --ignore-path .gitignore",
-    "test": "yarn test:node",
-    "test:node": "cd ./node && yarn test",
-    "postinstall": "husky install"
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
-    "@babel/core": "^7.18.0",
-    "@babel/preset-react": "^7.17.12",
-    "@imaginary-cloud/prettier-config": "^1.0.0",
-    "@types/node": "^12.12.21",
-    "@vtex/intl-equalizer": "^2.5.0",
-    "husky": "^8.0.1",
-    "prettier": "^2.6.2",
+    "@types/node": "12.12.21",
+    "@vtex/prettier-config": "0.1.4",
+    "eslint": "7.12.1",
+    "eslint-config-vtex": "12.3.2",
+    "husky": "4.2.3",
+    "lint-staged": "10.1.1",
+    "prettier": "2.0.2",
     "typescript": "3.8.3"
   },
-  "intl-equalizer": {
-    "referenceLocale": "en",
-    "localeDirectory": "messages"
-  },
-  "prettier": "@imaginary-cloud/prettier-config"
+  "version": "0.0.0"
 }

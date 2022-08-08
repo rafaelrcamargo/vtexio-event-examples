@@ -1,4 +1,4 @@
-![icon](https://cdn-icons-png.flaticon.com/128/3658/3658773.png)
+![icon](https://cdn-icons-png.flaticon.com/64/3658/3658773.png)
 
 # README Template
 

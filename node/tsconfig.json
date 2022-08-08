@@ -6,7 +6,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "target": "es2019",
-    "types": ["jest", "node"]
+    "types": ["node"]
   },
   "include": ["./typings/*.d.ts", "./**/*.tsx", "./**/*.ts"]
 }

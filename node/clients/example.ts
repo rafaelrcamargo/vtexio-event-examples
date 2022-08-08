@@ -6,6 +6,8 @@ export class Example extends ExternalClient {
   }
 
   public async test(origin: string) {
-    return this.http.get(`https://4006c06b-d8de-4361-8e53-6f7f2b431d32.mock.pstmn.io/link?origin=${origin}`)
+    return this.http.get(
+      `https://4006c06b-d8de-4361-8e53-6f7f2b431d32.mock.pstmn.io/link?origin=${origin}`
+    )
   }
 }
