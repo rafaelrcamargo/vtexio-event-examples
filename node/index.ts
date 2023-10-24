@@ -13,6 +13,8 @@ import { Clients } from './clients'
 import { event } from './events/onAppInstalled'
 import { test } from './routes/test'
 
+const TREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
 const TIMEOUT_MS = 2500
 
 // Create a LRU memory cache for the Status client.
@@ -30,6 +32,14 @@ const clients: ClientsConfig<Clients> = {
     default: {
       retries: 3,
       timeout: TIMEOUT_MS,
+    },
+    events: {
+      exponentialTimeoutCoefficient: 2,
+      exponentialBackoffCoefficient: 2,
+      initialBackoffDelay: 50,
+      retries: 1,
+      timeout: TREE_SECONDS_MS,
+      concurrency: CONCURRENCY,
     },
     // This key will be merged with the default options and add this cache to our Status client.
     status: {
